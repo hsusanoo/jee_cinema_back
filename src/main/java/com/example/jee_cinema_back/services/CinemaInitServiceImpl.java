@@ -16,7 +16,6 @@ import java.util.stream.Stream;
 @Service
 public class CinemaInitServiceImpl implements ICinemaInitService {
 
-
     @Autowired
     private CategorieRepository categorieRepository;
     @Autowired
@@ -125,7 +124,7 @@ public class CinemaInitServiceImpl implements ICinemaInitService {
 
     @Override
     public void initProjections() {
-        double[] prices = new double[]{400, 450, 600, 1000};
+        double[] prices = {400, 450, 600, 1000};
         List<Film> films = filmRepository.findAll();
 
         villeRepository.findAll().forEach(ville -> ville.getCinemas().forEach(cinema ->
